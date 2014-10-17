@@ -27,7 +27,7 @@
 <center>
 <h2>View of User Information</h2>
 <?php
-$con=mysqli_connect("localhost","root","","UCSC_conf");
+$con=mysqli_connect("localhost","root","","UCSC_cof");
 // Check connection
 if (mysqli_connect_errno()) {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
