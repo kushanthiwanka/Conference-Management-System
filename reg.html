@@ -1,0 +1,240 @@
+<html>
+<head>
+<title>Registration</title>
+<!--error massage getting-->
+<script language="JavaScript">
+function CheckForm() {
+if(document.registration.first_name.value=='') {
+		alert("Enter your first name to continue");
+		document.registration.first_name.focus();
+		return false; }
+if(document.registration.last_name.value=='') {
+		alert("Enter your last name to continue");
+		document.registration.last_name.focus();
+		return false; }	
+if(document.registration.date_of_birth.value=='') {
+		alert("Enter your date of birth to continue");
+		document.registration.date_of_birth.focus();
+		return false; }	
+if(document.registration.gender.value=='') {
+		alert("Enter your Gender to continue");
+		document.registration.gender.focus();
+		return false; }	
+if(document.registration.country.value=='') {
+		alert("Enter your country to continue");
+		document.registration.country.focus();
+		return false; }	
+if(document.registration.postal_code.value=='') {
+		alert("Enter your postalcode to continue");
+		document.registration.postal_code.focus();
+		return false; }		
+if(document.registration.email_address.value=='') {
+		alert("Enter your email address to continue");
+		document.registration.email_address.focus();
+		return false; }	
+if(document.registration.username.value=='') {
+		alert("Enter your username to continue");
+		document.registration.username.focus();
+		return false; }	
+if(document.registration.password.value=='') {
+		alert("Enter your passwaord to continue");
+		document.registration.password.focus();
+		return false; }	
+if((document.registration.password.value) .length<6){
+		alert("Password should be at least 6 characters.");
+		document.registration.password.focus();
+		return false; }		
+if(document.registration.confirm_password.value=='') {
+		alert("Enter your valid password to continue");
+		document.registration.confirm_password.focus();
+		return false; }	
+if(document.registration.password.value!=document.registration.confirm_password.value) {
+		alert("The passwords you types don't match. Retype the password again");
+		return false; }		
+if(document.registration.accept.value=='') {
+		alert("Please click the button to continue your registration");
+		return false; }		
+	return true;
+	}
+	
+</script>
+</head>
+<body>
+
+<form action="action.php" method="post" name="registration" onsubmit="return CheckForm();">
+
+<table >
+<h4><font face="Georgia" valign="left">Create Your New Account Here</font></h4>
+<tr >
+	<td width="210">Title*</td>
+	<td align="left"><select id="a" name="title">
+	    <option>Rev.</option>
+	    <option>Mr.</option>
+	    <option>Mrs.</option>
+		<option>Ms.</option>
+	    <option>Dr.</option>
+		<option>Prof.</option>
+		</select>
+	</td>
+</tr>
+</tr>
+
+
+<tr>
+	<td>First Name*</td>
+	<td><input  type="text" name="first_name" value="" size="30px"></td>
+</tr>
+
+<tr>
+	<td>Middle Name</td>
+	<td><input  type="text" name="middle_name" value="" size="30px"></td>
+</tr>
+
+<tr>
+	<td>Last Name*</td>
+	<td><input  type="text" name="last_name" value="" size="30px"></td>
+</tr>
+
+<tr>
+	<td>Date of Birth*</td>
+	<td><input  type="date" name="date_of_birth" value=""  placeholder="yyyy /mm  /dd" ></td>
+</tr>
+
+<tr>
+	<td>Gender*</td>
+	<td><input  type="radio" name="gender" value="M">Male
+	<br/>
+	<input  type="radio" name="gender" value="F">Female
+	</td>
+</tr>
+
+<tr>
+	<td>Please Select Your Country*</td>
+	<td><select  name="country">
+		<option>America</option>
+		 <option>Australia</option>
+		 <option>Austria</option>
+		 <option>Bahrain</option>
+		 <option>Bangladesh</option>
+		 <option>Brazil</option>
+		 <option>Canada</option>
+		 <option>China</option>
+		 <option>Cuba</option>
+		 <option>Cyprus</option>
+		 <option>Czech Republic</option>
+		 <option>Denmark</option>
+		 <option>El Salvador</option>
+		 <option>Finland</option>
+		 <option>France</option>
+		 <option>Germany</option>
+		 <option>Hong Kong</option>
+		 <option>Iceland</option>
+		 <option>India</option>
+		 <option>Indonesia</option>
+		 <option>Iran</option>
+		 <option>Iraq</option>
+		 <option>Ireland</option>
+		 <option>Israel</option>
+		 <option>Italy</option>
+		 <option>Jamaica</option>
+		 <option>Japan</option>
+		 <option>Jordan</option>
+		 <option>Korea, North</option>
+		 <option>Korea, South</option>
+		 <option>Kuwait</option>
+		 <option>Lebanon</option>
+		 <option>Malaysia</option>
+		 <option>Maldives</option>
+		 <option>New Zealand</option>
+		 <option>Netherlands</option>
+		 <option>Nepal</option>
+		 <option>Oman</option>
+		 <option>Pakistan</option>
+		 <option>Philippines</option>
+		 <option>Poland</option>
+		 <option>Portugal</option>
+		 <option>Qatar</option>
+		 <option>Russia</option>
+		 <option>Saudi Arabia</option>
+		 <option>Singapore</option>
+		 <option>Sri Lanka</option>
+		 <option>Switzerland</option>
+		 <option>Thailand </option>
+		 <option>United Kingdom</option>
+		 <option>Vietnam</option>
+		 <option>Yemen</option>
+		 <option>Zimbabwe</option>
+		 </select>
+	 </td>
+</tr>
+
+<tr>
+	<td>Postal Address</td>
+	<td><textarea  name="postal_address" rows="5" cols="30" value="" ></textarea></td>
+</tr>
+
+<tr>
+	<td>Postal Code*</td>
+	<td><input  type="text" name="postal_code"  value="" size="30px"></td>
+</tr>
+
+<tr>
+	<td>Email Address*</td>
+	<td><input  type="text" name="email_address" placeholder="example@yourmail.com" value="" size="30px"></td>
+</tr>
+
+
+<tr>
+	<td>Phone</td>
+	<td><input  type="text" name="phone_number" value="" ></td>
+</tr>
+
+<tr>
+	<td>Fax</td>
+	<td><input  type="text" name="fax" value="" ></td>
+</tr>
+
+<tr>
+	<td>Username*</td>
+	<td><input type="text" name="username" value="" ></td>
+</tr>
+
+<tr>
+	<td>Password*</td>
+	<td><input type="password" name="password" value="" ></td>
+</tr>
+
+<tr>
+	<td>Confirm Password*</td>
+	<td><input type="password" name="confirm_password" value="" ></td>
+</tr>
+
+
+</table>
+<br><br>
+<input type="checkbox" name="accept">
+I agree to the <a href="">Terms and Conditions</a> and <a href="">Privacy Policy</a>
+<br/><br/>
+<input type="submit" Value="Create" name="Submit">
+<input  type="reset" value="Cancel" name="Reset" >
+<br/><br/>
+</div>
+</form>
+
+</table>
+
+
+
+
+		<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+		<div id="footer">
+			Copyright &#169 Group No 09
+		</div>
+		
+	
+</ul>
+</div>
+
+</body>
+</html>
+ 
