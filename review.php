@@ -12,7 +12,7 @@
 			right:50px;
 			top:320px;
 			padding:60px;
-			background-color:transparent;
+			background-color: transparent;
 			
 		}
 		#ra{
