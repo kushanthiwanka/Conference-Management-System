@@ -1,31 +1,15 @@
 <html> 
 <head>
 <title>View User Information</title>
-<link rel="stylesheet" type="text/css" href="linking.css">
-</head> 
-<div id="head" class="headtx">
-<ul id="bar1">
-<li><a href="AboutUs.html">About Us</a></li>
-<li><a href="ContactUs.html">Contact Us</a></li>
-<li><a href="Sitemap.php">Site map</a></li>
-<li><a href="login.html">Log in</a></li>
-</ul>
-</div>
 
-<div id="head2" class="headertx">UCSC Conference Management System </div>
 
-<div id="line">
-<ul id="bar">
-    <li><a href="home.html"> Home</a></li>
-    <li><a href="Author.html"> Author</a></li>
-    <li><a href="Reviewer.html">Reviewer</a><li>
-	<li><a href="Paper.html">Paper</a><li>
-</ul>
 </div>
 <br/><br/><br/>
 <body>
+
 <center>
 <h2>Assign Reviewers</h2>
+<div >
 <?php
 $con=mysqli_connect("localhost","root","","UCSC_conf");
 // Check connection
@@ -35,7 +19,8 @@ if (mysqli_connect_errno()) {
 
 $result = mysqli_query($con,"SELECT * FROM member");
 
-echo "<table border='1'>
+echo "<table style='border:1px solid black' >
+
 <tr>
 
 <th>Title</th>
@@ -77,6 +62,7 @@ echo "</table>";
 
 mysqli_close($con);
 ?>
+</div>
 <div><br/></div>
 <div><input type="submit" value="Select" name="assign"></div>
 </center>
