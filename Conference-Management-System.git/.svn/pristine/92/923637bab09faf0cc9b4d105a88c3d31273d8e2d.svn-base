@@ -632,7 +632,7 @@ a:focus {
 }
 
 .container-fluid {
-  padding-right: 30px;
+  padding-right: 20px;
   padding-left: 20px;
   *zoom: 1;
 }
@@ -5993,7 +5993,7 @@ a.badge:focus {
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
   display: block;
-  line-height: 2;
+  line-height: 1;
 }
 
 .carousel-inner > .active,
@@ -6009,7 +6009,7 @@ a.badge:focus {
 .carousel-inner > .next,
 .carousel-inner > .prev {
   position: absolute;
-  top: 10;
+  top: 0;
   width: 100%;
 }
 
