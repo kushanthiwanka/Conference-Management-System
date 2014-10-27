@@ -16,7 +16,7 @@
 			
 		</style>
 	</head>
-	<body background="30.jpg" >
+	<body background="image/30.jpg" >
 	<center><h1>Uploadpaper</h1></center>
 		<div class="well span10"id="as">
 			<legend><font size="+1" color="yellow" face="Times New Roman">General Information</legend>

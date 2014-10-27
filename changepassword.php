@@ -21,7 +21,7 @@
 		</style>
 	</head>
 		
-	<body background="30.jpg"> 
+	<body background="image/30.jpg"> 
 		<h1>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspYou Can reset Your Password Through the below Steps"</h1>
 		
 		<div class="well span12"id="az">

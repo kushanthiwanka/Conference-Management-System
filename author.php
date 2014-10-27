@@ -39,7 +39,7 @@
 	</style>
 </head>
 
-	<body background="30.jpg" >
+	<body background="image/30.jpg" >
 		<div align="right"id="as">
 			<a href="apkushan90?">User name</a>
 			|
