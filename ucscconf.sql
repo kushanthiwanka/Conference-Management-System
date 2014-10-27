@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 27, 2014 at 10:51 AM
+-- Generation Time: Oct 27, 2014 at 11:29 AM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -19,6 +19,18 @@ SET time_zone = "+00:00";
 --
 -- Database: `ucscconf`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `login`
+--
+
+CREATE TABLE IF NOT EXISTS `login` (
+  `username` varchar(8) NOT NULL,
+  `password` varchar(8) NOT NULL,
+  UNIQUE KEY `username` (`username`,`password`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
