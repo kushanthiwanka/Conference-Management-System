@@ -32,8 +32,23 @@
 	height: 340px;
 	z-index: 225;
 }
+a {
+	color: #9F0;
+}
 </style>
 <link href="SpryAssets/SpryMenuBarVertical.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+#apDiv3 {
+	position: absolute;
+	left: 243px;
+	top: 15px;
+	width: 181px;
+	height: 108px;
+	z-index: 226;
+	color: #FFF;
+	font-size: large;
+}
+</style>
 <script src="SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
 </head>
 
@@ -45,12 +60,12 @@
 <div id="Icter"><img src="images/icter_logo.png" width="189" height="115" alt="Icter" /></div>
 <div id="apDiv2">
   <ul id="MenuBar1" class="MenuBarVertical">
-    <li><a href="#">Home</a></li>
+    <li><a href="Home.html">Home</a></li>
     <li><a href="#">Past Conferences</a></li>
     <li><a href="#" class="MenuBarItemSubmenu">Papers</a>
       <ul>
         <li><a href="#">Call for Papers</a></li>
-        <li><a href="#">Submission Guidelines</a></li>
+        <li><a href="submissionguidelines.html">Submission Guidelines</a></li>
         <li><a href="#">Accepted Papers</a></li>
       </ul>
     </li>
@@ -73,6 +88,9 @@
     <li><a href="Contact.html">Contact</a></li>
   </ul>
 </div>
+<div id="apDiv3">Sign in<br>
+  or <br>
+<a href="phpSecureLogin-master/register.php">Register</a></div>
 <script type="text/javascript">
 var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {imgRight:"SpryAssets/SpryMenuBarRightHover.gif"});
 </script>
