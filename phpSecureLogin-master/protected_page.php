@@ -8,13 +8,13 @@ sec_session_start();
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         <title>Secure Login: Protected Page</title>
         <link rel="stylesheet" href="styles/main.css" />
     </head>
-    <body>
+    <body background="../images/Background-Image.jpg" text="#FFFFFF" vlink="#99FF00">
         <?php if (login_check($mysqli) == true) : ?>
-        <p>Welcome <?php echo htmlentities($_SESSION['username']); ?>!</p>
+    <p>Welcome <?php echo htmlentities($_SESSION['username']); ?>!</p>
             <p>
                 You Have Succesfully logged in
             </p>
