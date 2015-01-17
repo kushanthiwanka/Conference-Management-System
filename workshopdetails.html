@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+<link href="themes/4/js-image-slider.css" rel="stylesheet" type="text/css" />
+<link href="generic.css" rel="stylesheet" type="text/css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="themes/4/js-image-slider.js" type="text/javascript"></script>
+
+<title>Workshop & Details</title>
+
+</head>
+<body>
+    <div id="apDiv1">
+        <h2>International Conference on Advances in ICT for Emerging Regions</h2>
+        <h3>10-14th December 2014, Colombo (Sri Lanka)</h3>
+    </div>
+    
+    <div id="Icter"><img src="images/icter_logo.png" width="189" height="115" alt="Icter" />
+    </div>
+    
+    <!-- login and register -->
+    
+    <div id="apDiv3">
+        <p><a href="phpSecureLogin-master/index.php">Log in</a><br>
+            or <br>
+            <a href="phpSecureLogin-master/register.php">Register</a></p>
+    </div>
+    
+    <!-- Menu -->
+    
+    <div class="menu container">
+        <ul class="nav nav-pills nav-stacked navbar navbar-inverse">
+            <li ><a href="home.html"><h5>Home</h5></a></li>
+            <li ><a href="pastconferences.html"><h5>Past Conferences</h5></a></li>
+            <li><a href="callforparticipants.html"><h5>Call For Partcipations</h5></a></li>
+            
+            <li class="dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle"><h5>Papers</h5><b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+                            <li><a href="submissionguidelines.html"><h5>Submission Guidelines</h5></a></li>
+                            <li><a href="acceptedpaper.html"><h5>Accepted Papers</h5></a></li>
+                        </ul>
+            </li>
+            
+            <li class="dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle"><h5>Conference Details</h5><b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="registrationpayments.html"><h5>Registration & Payment</h5></a></li>
+                            <li><a href="conferencevenue.html"><h5>Conference Venue</h5></a></li>
+                            <li><a href="importantdates.html"><h5>Important Dates</h5></a></li>
+                        </ul>
+            </li>
+            
+            <li ><a href="workshopdetails.html"><h5>Workshop & Details</h5></a></li>
+            
+            <li class="dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle"><h5>Speakers</h5><b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="keynotespeakers.html"><h5>Keynote Speakers</h5></a></li>
+                            <li><a href="invitedspeakers.html"><h5>Invited Speakers</h5></a></li>
+                        </ul>
+            </li>
+            <li ><a href="programcommittee.html"><h5>Program Committee</h5></a></li>
+            <li ><a href="accommodation.html"><h5>Accommodation</h5></a></li>
+            <li ><a href="contact.html"><h5>Contact</h5></a></li>
+        </ul>
+    </div>
+    
+    <!-- content -->
+    
+    <div class="position1">
+        <img src="images/Workshop/1.png" style="width: 90%">
+        <img src="images/Workshop/2.png" style="width: 90%">
+        <img src="images/Workshop/3.png" style="width: 90%">
+        <img src="images/Workshop/4.png" style="width: 90%">
+        <img src="images/Workshop/5.png" style="width: 90%">
+        <img src="images/Workshop/6.png" style="width: 90%">
+        <img src="images/Workshop/7.png" style="width: 90%">
+        <img src="images/Workshop/8.png" style="width: 90%">
+        <img src="images/Workshop/9.png" style="width: 90%">
+        <img src="images/Workshop/10.png" style="width: 90%">
+    </div>
+    
+    <script type="text/javascript">
+        //The following script is for the group 2 navigation buttons.
+        function switchAutoAdvance() {
+            imageSlider.switchAuto();
+            switchPlayPauseClass();
+        }
+        function switchPlayPauseClass() {
+            var auto = document.getElementById('auto');
+            var isAutoPlay = imageSlider.getAuto();
+            auto.className = isAutoPlay ? "group2-Pause" : "group2-Play";
+            auto.title = isAutoPlay ? "Pause" : "Play";
+        }
+        switchPlayPauseClass();
+    </script>
+    
+    
+</body>
+</html>                                  		
