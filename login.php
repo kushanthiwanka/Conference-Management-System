@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <?php 
 
 function SignIn() 
@@ -8,12 +10,12 @@ function SignIn()
 	require_once("conn.php");
 
 	//variables for POST method 
-	$username = $_POST["username"];
-	$password = $_POST["password"];
+	$username = $_POST["email_address"];
+        $password = $_POST["password"];
 
 	//check the username and password for correctness
 
-	$Check_Details = ("SELECT username FROM member where username = '$username' AND password = '$password'") or die(mysql_error());
+	$Check_Details = ("SELECT username FROM member where email_address = '$username' AND password = '$password'") or die(mysql_error());
 	$result = mysql_query($Check_Details);
 
 	while($row=mysql_fetch_array($result))
@@ -32,56 +34,83 @@ function SignIn()
 		}
 }
 
-if(isset($_POST["submit"])) 
+if(isset($_POST['submit'])) 
 	{ 
 	SignIn(); 
 	} 
 ?>
-<!DOCTYPE html>
+<html lang="en">
+<head>
 
-<html>
-<head>
-<title>User Login</title>
-<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+</head>
 <body>
     
-<br><br>
+<div class="container logpos">
+    <div class="row">
+        
+	    <div class="container">    
+        <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
+            <div class="panel panel-info" >
+                
+                <div class="panel-heading">
+                    <div class="panel-title">Sign In</div>
+                </div>     
 
-<table width="300" border="0" align="center" cellpadding="1" cellspacing="1" bgcolor="#CCCCCC">
-<tr>
-    <form name="login_form" method="post" action="">
-    <td>
-    <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
-    <tr>
-        <td colspan="3"><strong>Member Login </strong></td>
-    </tr>
-    <tr>
-        <td width="78">Username</td>
-        <td width="6">:</td>
-        <td width="294"><input name="username" type="text"></td>
-    </tr>
-    <tr>
-        <td>Password</td>
-        <td>:</td>
-        <td><input name="password" type="password"></td>
-    </tr>
+                    <div style="padding-top:30px" class="panel-body" >
 
-    <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td colspan="2"><input type="submit" name="submit" value="Login to the System"></td>
-    </tr>
-    </table>
-    </td>
-</form>
-</tr>
-</table>
-    <br><br>
-    <center>
-    <font color="Green" face="Times">
-    If you are a new user <a href="Registration.html"><font color="Red" face="Times">click here</font></a> for register for free.</font>
-    </center>
+                    <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+                            
+                    <form id="loginform" class="form-horizontal" role="form"  method="POST">
+                                    
+                            <div style="margin-bottom: 25px" class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input type="text" class="form-control" name="email_address" placeholder="your email">                                        
+                            </div>
+                                
+                            <div style="margin-bottom: 25px" class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                        <input id="login-password" type="password" class="form-control" name="password" placeholder="password">
+                            </div>
+                                    
+                            <div style="margin-top:10px" class="form-group">
+                                    <!-- Button -->
 
+                                    <div class="col-sm-12 controls">
+                                      <input type="submit" name="submit" value="Sign in" class="btn btn-success">
+                                    </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                    
+                                <div class="col-md-12 control">
+                                    <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%" >
+                                            Don't have an account! 
+                                        <a href="Registration.html">
+                                            Sign Up Here
+                                        </a>
+                                    </div>
+                                </div>
+                                    
+                            </div>    
+                        </form>     
+
+
+
+                    </div>                     
+                
+                    </div>  
+        </div>
+                
+        
+    </div>
+    
+    </div>
+</div>
 </body>
-
-</html>
+</html>                                  		

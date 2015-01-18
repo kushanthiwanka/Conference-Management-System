@@ -1,5 +1,5 @@
 <?php
-//include "home.html";
+include "test.html";
 session_start();
 
 if(!isset($_SESSION["username"])) 
