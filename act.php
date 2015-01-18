@@ -35,7 +35,7 @@ if($result){
 echo "Registration Successful";
 }
 mysql_close($con);
-header("location:Registration.html");
+header("location:home.html");
 exit();
 }
 ?>

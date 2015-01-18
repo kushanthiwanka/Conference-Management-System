@@ -1,7 +1,11 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Registration</title>
-<!--error massage getting-->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 <script language="JavaScript">
 function CheckForm() {
 if(document.registration.first_name.value==='') {
@@ -59,59 +63,86 @@ if(document.registration.accept.value==='') {
 	
 </script>
 
-
+<title>Registration Form</title>
 
 </head>
+<body>
 
-<form action="act.php" method="post" name="registration" onsubmit="return CheckForm();">
+<div class="container">
+        <div class="row text-center pad-top ">
+            
+        </div>
 
-<table class="row-fluid">
-<h4><font face="Georgia" valign="left">Create Your New Account Here</font></h4>
-<tr >
-	<td width="210">Title*</td>
-	<td align="left"><select id="a" name="title">
-	    <option>Rev.</option>
-	    <option>Mr.</option>
-	    <option>Mrs.</option>
-		<option>Ms.</option>
-	    <option>Dr.</option>
-		<option>Prof.</option>
-		</select>
-	</td>
-</tr>
-</tr>
+            <div class="row  pad-top">
+               
+                <div class="" style="position: absolute; width: 75%; left: 160px; top: 10px;">
+                        <div class="panel panel-default">
+                            <div class="panel-heading text-center pad-top">
+                        <strong>   Register Yourself </strong>  
+                            </div>
+                            
+                            <div class="panel-body">
+                                <form action="act.php" method="post" name="registration" onsubmit="return CheckForm();" role="form">
+<br/>
+    
+                                        <div class="form-group input-group">
+                                            <table>
+                                                <tr>
+                                                    <td style="width: 210px;"><b >Title</b></td>
+                                                    <td>
+                                                        <select id="a" name="title" style="width: 140px;">
+                                                            <option>Rev.</option>
+                                                            <option>Mr.</option>
+                                                            <option>Mrs.</option>
+                                                            <option>Ms.</option>
+                                                            <option>Dr.</option>
+                                                            <option>Prof.</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+<hr>
+                                        <div class="form-group input-group">
+                                            
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"  ></i></span>
+                                            <input type="text" name="first_name" value="" class="form-control" placeholder="First Name*" />
+                                            
+                                        </div>
+                                        <div class="form-group input-group">
+                                            
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"  ></i></span>
+                                            <input type="text" name="middle_name" value="" class="form-control" placeholder="Middle Name" />
+                                            
+                                        </div>
+                                        <div class="form-group input-group">
+                                            
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"  ></i></span>
+                                            <input type="text" name="last_name" value="" class="form-control" placeholder="Last Name*"/>
+                                            
+                                        </div>
 
-
-<tr>
-	<td>First Name*</td>
-	<td><input  type="text" name="first_name" value="" size="30px"></td>
-</tr>
-
-<tr>
-	<td>Middle Name</td>
-	<td><input  type="text" name="middle_name" value="" size="30px"></td>
-</tr>
-
-<tr>
-	<td>Last Name*</td>
-	<td><input  type="text" name="last_name" value="" size="30px"></td>
-</tr>
-
-<tr>
-	<td>Date of Birth*</td>
-	<td><input  type="date" name="date_of_birth" value=""  placeholder="yyyy /mm  /dd" ></td>
-</tr>
-
-<tr>
-	<td>Gender*</td>
-	<td><input  type="radio" name="gender" value="M">Male
-	<br/>
-	<input  type="radio" name="gender" value="F">Female
-	</td>
-</tr>
-
-<tr>
-	<td>Please Select Your Country*</td>
+                                        <div class="form-group input-group">
+                                            
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-plus-sign"  ></i></span>
+                                            <input type="date" name="date_of_birth" value="" class="form-control" placeholder="Your Birthday mm/dd/yyyy*"/>
+                                            
+                                        </div>
+                                        <div class="form-group input-group">
+                                            <table>
+                                                <tr>
+                                                    <td style="width: 210px;"><b>Gender*</b></td>
+                                                    <td><b><input  type="radio" name="gender" value="M">Male
+                                                    <br/>
+                                                    <input  type="radio" name="gender" value="F">Female</b></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+<hr>
+                                        <div class="form-group input-group">
+                                            <table>
+                                                <tr>
+                                                    <td style="width: 210px;"><b>Please Select Your Country*</b></td>
 	<td><select  name="country">
 		<option>America</option>
 		 <option>Australia</option>
@@ -170,58 +201,78 @@ if(document.registration.accept.value==='') {
 	 </td>
 </tr>
 
-<tr>
-	<td>Postal Address</td>
-	<td><textarea  name="postal_address" rows="5" cols="30" value="" ></textarea></td>
-</tr>
+                                            </table>
+                                        </div>
+                                        <div class="form-group input-group">
+                                            
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"  ></i></span>
+                                            <input type="text" name="postal_address" class="form-control" placeholder="Postal Address" />
+                                            
+                                        </div>
 
-<tr>
-	<td>Postal Code*</td>
-	<td><input  type="text" name="postal_code"  value="" size="30px"></td>
-</tr>
+                                        <div class="form-group input-group">
+                                            
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-road"  ></i></span>
+                                            <input type="text" name="postal_code"  value="" class="form-control" placeholder="Postal Code*" />
+                                            
+                                        </div>
 
-<tr>
-	<td>Email Address*</td>
-	<td><input  type="text" name="email_address" placeholder="example@yourmail.com" value="" size="30px"></td>
-</tr>
+                                        <div class="form-group input-group">
+                                            <span class="input-group-addon">@</span>
+                                            <input type="text" name="email_address" class="form-control" placeholder="Your Email" />
+                                        </div>
+                                        
+                                        <div class="form-group input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"  ></i></span>
+                                            <input type="text" name="phone_number" value="" class="form-control" placeholder="Phone Number" />
+                                        </div>
 
+                                        <div class="form-group input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-print"  ></i></span>
+                                            <input type="text" name="fax" value="" class="form-control" placeholder="Fax" />
+                                        </div>
+                                    <div class="form-group input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-tag"  ></i></span>
+                                            <input type="text" name="username" value="" class="form-control" placeholder="Desired Username" />
+                                    </div>
 
-<tr>
-	<td>Phone</td>
-	<td><input  type="text" name="phone_number" value="" ></td>
-</tr>
+                                    
 
-<tr>
-	<td>Fax</td>
-	<td><input  type="text" name="fax" value="" ></td>
-</tr>
+                                    <div class="form-group input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"  ></i></span>
+                                        <input type="password" name="password" value="" class="form-control" placeholder="Enter Password" />
+                                    </div>
 
-<tr>
-	<td>Username*</td>
-	<td><input type="text" name="username" value="" ></td>
-</tr>
+                                     <div class="form-group input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"  ></i></span>
+                                            <input type="password" name="confirm_password" value="" class="form-control" placeholder="Confirm Password" />
+                                    </div>
+                                    
+                                    <div class="btn btn-group">
+                                        <table>
+                                            
+                                            <tr>
+                                                
+                                                <td><input type="submit" Value="Create" name="Submit" class="btn btn-success btn-lg btn-block btn-group-justified" style="width: 150px; position: absolute; left:10px; "></td>
+                                                <td><input  type="reset" value="Cancel" name="Reset"  class="btn btn-success btn-lg btn-block btn-group-justified" style="width: 150px; position: absolute; left:170px; "></td>
+                                            </tr>
+                                        </table>
 
-<tr>
-	<td>Password*</td>
-	<td><input type="password" name="password" value="" ></td>
-</tr>
-
-<tr>
-	<td>Confirm Password*</td>
-	<td><input type="password" name="confirm_password" value="" ></td>
-</tr>
-
-
-</table>
-<br><br>
-
-<input type="submit" Value="Create" name="Submit">
-<input  type="reset" value="Cancel" name="Reset" >
-<br/><br/>
-</div>
-</form>
-
-
+                                    </div>
+    
+                                    <hr />
+                                    <br>
+                                    Already Registered ?  <a href="#" >Login here</a>
+                                    
+                                    </form>
+                            </div>
+                           
+                        </div>
+                    </div>
+                
+        </div>
+        
+    </div>
+<!-- /.container -->
 </body>
-</html>
- 
+</html>                                  		
