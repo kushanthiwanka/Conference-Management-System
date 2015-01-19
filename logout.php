@@ -1,19 +1,9 @@
 <?php
 session_start();
-if(isset($_SESSION["username"])) {
-unset($_SESSION["username"]);
+
+if(isset($_SESSION["email_address"])){
+	unset($_SESSION["email_address"]);
+        session_unset();
 }
-header("Location:login.php");
-exit;
+header("location:home.html");
 ?>
-<html>
-<head>
-<title>Logged Off</title>
-</head>
-<body>
-<br><br>
-<div align="">
-<h2>You are now logged off</h2>
-&nbsp;&nbsp;&nbsp;
-<a href="login.php">home</a></div>
-</body> </html>

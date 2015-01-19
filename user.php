@@ -2,11 +2,12 @@
 include "test.html";
 session_start();
 
-if(!isset($_SESSION["username"])) 
+if(!isset($_SESSION["email_address"])) 
 	{
 	header("Location:error.html");
 	exit;
 	}
+        
 ?>
 
 <html>

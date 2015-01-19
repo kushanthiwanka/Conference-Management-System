@@ -15,7 +15,7 @@ function SignIn()
 
 	//check the username and password for correctness
 
-	$Check_Details = ("SELECT username FROM member where email_address = '$username' AND password = '$password'") or die(mysql_error());
+	$Check_Details = ("SELECT email_address FROM member where email_address = '$username' AND password = '$password'") or die(mysql_error());
 	$result = mysql_query($Check_Details);
 
 	while($row=mysql_fetch_array($result))
@@ -28,7 +28,7 @@ function SignIn()
 		}
 	else
 		{
-		$_SESSION["username"] = $name;
+		$_SESSION["email_address"] = $name;
 		header("Location:user.php");
 		exit;
 		}
