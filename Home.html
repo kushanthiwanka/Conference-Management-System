@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<link href="themes/4/js-image-slider.css" rel="stylesheet" type="text/css" />
+<script src="themes/4/js-image-slider.js" type="text/javascript"></script>
+<link href="generic.css" rel="stylesheet" type="text/css" />
+
+<title>Home</title>
+
+<style type="text/css">
+    #apDiv1 {
+	position: absolute;
+	width: 100%;
+	height: 119px;
+	z-index: -1;
+	left: 2px;
+	top: 2px;
+	text-align: right;
+	background-color: rgba(0,0,51,.8);
+	right: 5%;
+	color: rgba(204,204,204,1);
+	clip: rect(auto,auto,auto,auto);
+    }
+    
+    #apDiv3 {
+	position: absolute;
+	left: 243px;
+	top: 15px;
+	width: 181px;
+	height: 108px;
+	z-index: 226;
+	color: #fff;
+	font-size: 10px;
+    }
+    
+    p{
+        font-size: 200%;
+    }
+    
+    li{
+        font-size: 150%;
+    }
+    
+    .contentloc{
+        position: absolute;
+        top: 510px;
+        width: 80%;
+        left: 15%;
+    }
+    
+</style>
+
+</head>
+<body>
+    
+    
+    <div id="apDiv1">
+        <h2>International Conference on Advances in ICT for Emerging Regions</h2>
+        <h3>10-14th December 2014, Colombo (Sri Lanka)</h3>
+    </div>
+    
+    <div id="Icter"><img src="images/icter_logo.png" width="189" height="115" alt="Icter" />
+    </div>
+    
+    <!-- login and register -->
+    
+    <div id="apDiv3">
+        <p><a href="login.php">Log in</a><br>
+            or <br>
+            <a href="Registration.html">Register</a></p>
+    </div>
+    
+    <!-- Menu -->
+    
+    <div class="menu container">
+        <ul class="nav nav-pills nav-stacked navbar navbar-inverse">
+            <li ><a href="home.html"><h5>Home</h5></a></li>
+            <li ><a href="pastconferences.html"><h5>Past Conferences</h5></a></li>
+            <li><a href="callforparticipants.html"><h5>Call For Partcipations</h5></a></li>
+            
+            <li class="dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle"><h5>Papers</h5><b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+                            <li><a href="submissionguidelines.html"><h5>Submission Guidelines</h5></a></li>
+                            <li><a href="acceptedpaper.html"><h5>Accepted Papers</h5></a></li>
+                        </ul>
+            </li>
+            
+            <li class="dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle"><h5>Conference Details</h5><b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="registrationpayments.html"><h5>Registration & Payment</h5></a></li>
+                            <li><a href="conferencevenue.html"><h5>Conference Venue</h5></a></li>
+                            <li><a href="importantdates.html"><h5>Important Dates</h5></a></li>
+                        </ul>
+            </li>
+            
+            <li ><a href="workshopdetails.html"><h5>Workshop & Details</h5></a></li>
+            
+            <li class="dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle"><h5>Speakers</h5><b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="keynotespeakers.html"><h5>Keynote Speakers</h5></a></li>
+                            <li><a href="invitedspeakers.html"><h5>Invited Speakers</h5></a></li>
+                        </ul>
+            </li>
+            <li ><a href="programcommittee.html"><h5>Program Committee</h5></a></li>
+            <li ><a href="accommodation.html"><h5>Accommodation</h5></a></li>
+            <li ><a href="contact.html"><h5>Contact</h5></a></li>
+        </ul>
+    </div>
+    
+    <!-- Image slider -->
+    
+    <div id="sliderFrame" class="c_pos">
+        <div id="slider">
+            <img src="images/01.jpg" />
+            <img src="images/02.jpg" />
+            <img src="images/03.jpg" />
+            <img src="images/04.jpg" />
+            <img src="images/05.jpg" />
+            <img src="images/06.jpg" />
+            <img src="images/07.jpg" />
+        </div>
+        
+        <!--Custom navigation buttons on both sides-->
+        <div class="group1-Wrapper">
+            <a onclick="imageSlider.previous()" class="group1-Prev"></a>
+            <a onclick="imageSlider.next()" class="group1-Next"></a>
+        </div>
+        
+        <!--nav bar-->
+        <div style="text-align:center;padding:20px;z-index:20;">
+            <a onclick="imageSlider.previous()" class="group2-Prev"></a>
+            <a id='auto' onclick="switchAutoAdvance()"></a>
+            <a onclick="imageSlider.next()" class="group2-Next"></a>
+        </div>
+    </div>
+    
+    <!-- Content -->
+    
+    <div class="contentloc">
+            
+        <h1>ICTER2014</h1>
+        <h2>10th to 14th December 2014, Colombo, Sri Lanka.</h2>
+        
+        <br><br>
+        
+        <p>We are pleased to announce that this year’s International Conference on Advances in ICT for Emerging Regions (ICTer2014) will be held in Colombo, Sri Lanka from 10th to 14th December 2014. ICTer2014 is co-sponsored by IEEE Sri Lanka Section and is the successor to the seminal International Information Technology Conference (IITC) held in Sri Lanka since 1998. It provides an ideal platform to the researchers and practitioners alike to showcase research and development activities carried out in ICT and CS domains. 
+            <strong>Proceedings of ICTer2014 will be published in both book and submitted to IEEE Xplore.</strong> Selected papers will be invited for publication in the special issue of ICTer Journal (<a href="http://www.icter.org/journal">www.icter.org/journal</a>). And from 2012, ICTer has been indexed by Thomson Reuters and the only Sri Lankan academic conference to have had the opportunity be indexed by Thomson Reuters.</p>
+        <p>The main conference will take place on Thursday 11th and Friday 12th December 2014 at BMICH, Colombo. In addition to the presentation of selected papers, several keynote addresses by leading personalities in the IT world will be made. The conference will also include pre-conference (10th) and post-conference (13th) high quality tutorials/workshops in areas of current interest in Information and Communication Technology. Among the social activities is a conference tour organized on 14<sup>th</sup> December.</p>
+
+        <p><strong><em>ICTer2014 conference will focus on important problems and potential solutions in areas of ICT including but not limited to the following:</em></strong></p>
+
+        <div>
+        <ul><li><em>Wearable Computing and Internet of Things</em></li>
+        <li><em>Cyber Physical Systems</em></li>
+        <li><em>Smart Environments</em></li>
+        <li><em>Machine Learning for Big Data Analytics</em></li>
+        <li><em>IaaS, SaaS, PaaS and XaaS</em></li>
+        <li><em>ICT Applications in Bio Science, Transportation and the Public Sector</em></li>
+        <li><em>Cyber Security</em></li>
+        <li><em>Nature Inspired Computing</em></li>
+        <li><em>Multi-agent and Intelligent Systems</em></li>
+        <li><em>Web Ontologies and Semantics</em></li>
+        <li><em>3D Modeling and Simulation, Graphics and Augmented Reality</em></li>
+        <li><em>Natural Language Technology</em></li>
+        <li><em>Agile and Collaborative Software Development  </em></li>
+        <li><em>ICT Enabled Education</em></li>
+        <li><em>E-Governance and ICT for Society</em></li>
+        </ul>
+        </div>
+
+        <p><a href="http://www.icter.org/conference/keynote_speeches" style="line-height: 20.6719989776611px;"><strong>Keynote Speakers of ICTer2014</strong></a></p>
+        <p><a href="http://www.icter.org/conference/invited_speeches"><strong>Invited Speakers of ICTer2014</strong></a></p>
+        <p><strong><a href="http://www.icter.org/conference/accepted_papers"><span style="line-height: 20.6719989776611px;">Accepted Papers and Posters of ICTer2014</span></a></strong></p>
+        <p><span style="line-height: 20.6719989776611px;">Submission of Final Papers / Abstracts (for accepted ones) on or before 2</span><strong style="line-height: 20.6719989776611px;">0<font size="1">-</font></strong><strong style="line-height: 20.6719989776611px;">Oct-2014.</strong></p>
+
+        <p>Please follow the paper submission guidelines at <a href="http://www.icter.org/conference/submissionguidelines/">http://www.icter.org/conference/submissionguidelines/</a></p>
+        <p>All inquiries about the submission of papers should be made to:</p>
+        <p>E-mail: <a href="mailto:info@icter.org">info@icter.org</a>, Phone: 94-11-2581248, Fax: 94-11-2587239</p>
+        <p> </p>   
+        
+        </div>
+    
+    
+    <script type="text/javascript">
+        //The following script is for the group 2 navigation buttons.
+        function switchAutoAdvance() {
+            imageSlider.switchAuto();
+            switchPlayPauseClass();
+        }
+        function switchPlayPauseClass() {
+            var auto = document.getElementById('auto');
+            var isAutoPlay = imageSlider.getAuto();
+            auto.className = isAutoPlay ? "group2-Pause" : "group2-Play";
+            auto.title = isAutoPlay ? "Pause" : "Play";
+        }
+        switchPlayPauseClass();
+    </script>
+    
+    
+</body>
+</html>                                  		

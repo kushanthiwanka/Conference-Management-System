@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+        
+        <title>Paper Submission</title>
+    </head>
+<body>
+    <div class="container">
+        <div class="row text-center pad-top "></div>
+            <div class="row  pad-top">
+                <div class="" style="position: absolute; width: 75%; left: 160px; top: 10px;">
+                    <div class="form-group input-group">
+                        <form action="upload.php" method="post" enctype="multipart/form-data">
+                    <div class="form-group input-group">        
+                        <input name="firstname" placeholder="First Name"><br>
+                    </div>
+                        
+                    <div class="form-group input-group">
+                        <input name="middlename" placeholder="Middle Name"><br>
+                    </div>
+                        
+                    <div class="form-group input-group">
+                        <input name="lastname" placeholder="Last Name"><br>
+                    </div>
+                        
+                    <div class="form-group input-group">
+                        <input name="organization" placeholder="Organization"><br>
+                    </div>
+                        
+                    <div class="form-group input-group">
+            <select  name="country">
+		<option>America</option>
+		 <option>Australia</option>
+		 <option>Austria</option>
+		 <option>Bahrain</option>
+		 <option>Bangladesh</option>
+		 <option>Brazil</option>
+		 <option>Canada</option>
+		 <option>China</option>
+		 <option>Cuba</option>
+		 <option>Cyprus</option>
+		 <option>Czech Republic</option>
+		 <option>Denmark</option>
+		 <option>El Salvador</option>
+		 <option>Finland</option>
+		 <option>France</option>
+		 <option>Germany</option>
+		 <option>Hong Kong</option>
+		 <option>Iceland</option>
+		 <option>India</option>
+		 <option>Indonesia</option>
+		 <option>Iran</option>
+		 <option>Iraq</option>
+		 <option>Ireland</option>
+		 <option>Israel</option>
+		 <option>Italy</option>
+		 <option>Jamaica</option>
+		 <option>Japan</option>
+		 <option>Jordan</option>
+		 <option>Korea, North</option>
+		 <option>Korea, South</option>
+		 <option>Kuwait</option>
+		 <option>Lebanon</option>
+		 <option>Malaysia</option>
+		 <option>Maldives</option>
+		 <option>New Zealand</option>
+		 <option>Netherlands</option>
+		 <option>Nepal</option>
+		 <option>Oman</option>
+		 <option>Pakistan</option>
+		 <option>Philippines</option>
+		 <option>Poland</option>
+		 <option>Portugal</option>
+		 <option>Qatar</option>
+		 <option>Russia</option>
+		 <option>Saudi Arabia</option>
+		 <option>Singapore</option>
+		 <option>Sri Lanka</option>
+		 <option>Switzerland</option>
+		 <option>Thailand </option>
+		 <option>United Kingdom</option>
+		 <option>Vietnam</option>
+		 <option>Yemen</option>
+		 <option>Zimbabwe</option>
+    </select><br>
+    </div>
+        <div class="form-group input-group">
+        <input type="checkbox" name="topic[]" value="Artificial Intelligence" />Artificial Intelligence<br />
+        <input type="checkbox" name="topic[]" value="Big Data" />Big Data<br />
+        <input type="checkbox" name="topic[]" value="Computational & Synthetic Biology" />Computational & Synthetic Biology<br />
+        <input type="checkbox" name="topic[]" value="Computer Architecture" />Computer Architecture<br />
+        <input type="checkbox" name="topic[]" value="Computer Graphics Vision Animation and Game Science" />Computer Graphics, Vision, Animation, and Game Science<br>
+        <input type="checkbox" name="topic[]" value="Computing for Development" />Computing for Development<br />
+        <input type="checkbox" name="topic[]" value="Data Management" />Data Management<br />
+        <input type="checkbox" name="topic[]" value="Human Computer Interaction" />Human Computer Interaction<br />
+        <input type="checkbox" name="topic[]" value="Machine Learning" />Machine Learning<br />
+        <input type="checkbox" name="topic[]" value="Natural Language Processing" />Natural Language Processing<br>
+        <input type="checkbox" name="topic[]" value="Programming Languages and Software Engineering" />Programming Languages and Software Engineering<br />
+        <input type="checkbox" name="topic[]" value="Robotics" />Robotics<br />
+        <input type="checkbox" name="topic[]" value="Security and Privacy" />Security and Privacy<br />
+        <input type="checkbox" name="topic[]" value="Systems and Networking" />Systems and Networking<br />
+        <input type="checkbox" name="topic[]" value="Theory of Computation" />Theory of Computation<br />
+        <input type="checkbox" name="topic[]" value="Wireless and Sensor Systems" />Wireless and Sensor Systems<br />
+        <input type="checkbox" name="topic[]" value="Ubiquitous Computing" />Ubiquitous Computing<br />
+        </div>
+        
+        <div class="form-group input-group">    
+        <input name="keywords" placeholder="Keywords"><br>
+        </div>
+    
+    <div class="form-group input-group">
+    <input name="abstract" placeholder="Abstract"><br>
+    </div>
+    
+    <div class="form-group input-group">
+    <input name="comments" placeholder="Optional Comments"><br>
+    </div>
+    
+    <div class="form-group input-group">
+    <input name="contactname" placeholder="Contact Name"><br>
+    </div>
+    
+    <div class="form-group input-group">
+    <input name="contactemail" placeholder="Contact Email"><br>
+    </div>
+    
+    <div class="form-group input-group">
+    <input name="contactnumber" placeholder="Contact Number"><br>
+    </div>
+    
+    <div class="form-group input-group">
+    <input type="file" name="fileToUpload" id="fileToUpload"><br>
+    </div>
+    
+    <div class="form-group input-group">
+    <input type="submit" value="Upload Paper" name="submit">
+    </div>
+</form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
