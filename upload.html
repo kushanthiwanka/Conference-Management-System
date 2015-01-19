@@ -1,38 +1,20 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-        
-        <title>Paper Submission</title>
-    </head>
 <body>
-    <div class="container">
-        <div class="row text-center pad-top "></div>
-            <div class="row  pad-top">
-                <div class="" style="position: absolute; width: 75%; left: 160px; top: 10px;">
-                    <div class="form-group input-group">
-                        <form action="upload.php" method="post" enctype="multipart/form-data">
-                    <div class="form-group input-group">        
-                        <input name="firstname" placeholder="First Name"><br>
-                    </div>
-                        
-                    <div class="form-group input-group">
-                        <input name="middlename" placeholder="Middle Name"><br>
-                    </div>
-                        
-                    <div class="form-group input-group">
-                        <input name="lastname" placeholder="Last Name"><br>
-                    </div>
-                        
-                    <div class="form-group input-group">
-                        <input name="organization" placeholder="Organization"><br>
-                    </div>
-                        
-                    <div class="form-group input-group">
-            <select  name="country">
+
+<form action="upload.php" method="post" enctype="multipart/form-data">
+        
+	<input name="paperTitle" placeholder="Paper Title"><br>
+	
+    <input name="firstname" placeholder="First Name"><br>
+    
+    <input name="middlename" placeholder="Middle Name"><br>
+    
+    <input name="lastname" placeholder="Last Name"><br>
+    
+    <input name="organization" placeholder="Organization"><br>
+    
+    <select  name="country">
 		<option>America</option>
 		 <option>Australia</option>
 		 <option>Austria</option>
@@ -87,8 +69,7 @@
 		 <option>Yemen</option>
 		 <option>Zimbabwe</option>
     </select><br>
-    </div>
-        <div class="form-group input-group">
+    
         <input type="checkbox" name="topic[]" value="Artificial Intelligence" />Artificial Intelligence<br />
         <input type="checkbox" name="topic[]" value="Big Data" />Big Data<br />
         <input type="checkbox" name="topic[]" value="Computational & Synthetic Biology" />Computational & Synthetic Biology<br />
@@ -106,45 +87,24 @@
         <input type="checkbox" name="topic[]" value="Theory of Computation" />Theory of Computation<br />
         <input type="checkbox" name="topic[]" value="Wireless and Sensor Systems" />Wireless and Sensor Systems<br />
         <input type="checkbox" name="topic[]" value="Ubiquitous Computing" />Ubiquitous Computing<br />
-        </div>
         
-        <div class="form-group input-group">    
-        <input name="keywords" placeholder="Keywords"><br>
-        </div>
+        
     
-    <div class="form-group input-group">
+    <input name="keywords" placeholder="Keywords"><br>
+    
     <input name="abstract" placeholder="Abstract"><br>
-    </div>
     
-    <div class="form-group input-group">
     <input name="comments" placeholder="Optional Comments"><br>
-    </div>
     
-    <div class="form-group input-group">
     <input name="contactname" placeholder="Contact Name"><br>
-    </div>
     
-    <div class="form-group input-group">
     <input name="contactemail" placeholder="Contact Email"><br>
-    </div>
     
-    <div class="form-group input-group">
     <input name="contactnumber" placeholder="Contact Number"><br>
-    </div>
     
-    <div class="form-group input-group">
     <input type="file" name="fileToUpload" id="fileToUpload"><br>
-    </div>
-    
-    <div class="form-group input-group">
     <input type="submit" value="Upload Paper" name="submit">
-    </div>
 </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
 </body>
 </html>
