@@ -24,6 +24,10 @@ if(document.registration.gender.value==='') {
 		alert("Enter your Gender to continue");
 		document.registration.gender.focus();
 		return false; }	
+if(document.registration.Register_as.value==='') {
+		alert("Enter your register type to continue");
+		document.registration.Register_as.focus();
+		return false; }	
 if(document.registration.country.value==='') {
 		alert("Enter your country to continue");
 		document.registration.country.focus();
@@ -133,6 +137,16 @@ if(document.registration.accept.value==='') {
                                                     <td><b><input  type="radio" name="gender" value="M">Male
                                                     <br/>
                                                     <input  type="radio" name="gender" value="F">Female</b></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+										<div class="form-group input-group">
+                                            <table>
+                                                <tr>
+                                                    <td style="width: 210px;"><b>Register_as*</b></td>
+                                                    <td><b><input  type="radio" name="Register_as" value="A">Author
+                                                    <br/>
+                                                    <input  type="radio" name="Register_as" value="R">Reviewer</b></td>
                                                 </tr>
                                             </table>
                                         </div>
