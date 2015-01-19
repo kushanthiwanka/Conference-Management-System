@@ -63,6 +63,9 @@ mysql_select_db("ucsc_conf") or die(mysql_error());
                 echo $row['PathOfPaper'];
                 echo ' <td> ';
                 echo $row['mark'];
+                echo ' <td> ';
+                if($row['mark']==0) print "To be reviewed" ;
+                    else print "Reviewed" ;
 
               }
     
