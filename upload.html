@@ -6,57 +6,47 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
         
-        <title>Registration Form</title>
+        <title>Upload Paper</title>
     </head>
 <body>
-
-<div class="container">
+    <div class="container">
         <div class="row text-center pad-top ">
-
-            <div class="row  pad-top">
-               
-                <div class="" style="position: absolute; width: 75%; left: 160px; top: 10px;">
-                        <div class="panel panel-default">
+            <div class="" style="position: absolute; width: 75%; left: 160px; top: 10px;">
+                <div class="panel panel-default">
                             <div class="panel-heading text-center pad-top">
                         <strong> Upload paper </strong>  
                             </div>
-                            
-                            <div class="panel-body">
-                                <form action="upload.php" method="post" enctype="multipart/form-data">
-<br/>
-                                        <div class="form-group input-group">
-                                            <span class="input-group-addon"><i class="glyphicon glyphicon-list-alt"  ></i></span>
-                                            <input name="PaperTitle" class="form-control" placeholder="Paper Title"><br>
-                                        </div>
-    
-                                        <div class="form-group input-group">
-                                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"  ></i></span>
-                                            <input name="firstname" class="form-control" placeholder="First Name"><br>
-                                        </div>
-
-                                        <div class="form-group input-group">
-                                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"  ></i></span>
-                                            <input name="middlename" placeholder="Middle Name" class="form-control"><br>
-                                        </div>
-
-                                        <div class="form-group input-group">
-                                            
-                                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"  ></i></span>
-                                                <input name="lastname" placeholder="Last Name" class="form-control"><br>
-                                            
-                                        </div>
-                                        
-
-                                        <div class="form-group input-group">
-                                            
-                                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"  ></i></span>
-                                            <input name="organization" class="form-control" placeholder="Organization"><br>
-                                            
-                                        </div>
-
-                                        <div class="form-group input-group">
-                                            <b >Select Your Country</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <select  name="country" style="width: 290px;">
+                    <div class="panel-body">
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+        
+        <div class="form-group input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-list-alt"  ></i></span>
+            <input name="paperTitle" class="form-control" placeholder="Paper Title"><br>
+        </div>
+        
+        <div class="form-group input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"  ></i></span>
+        <input name="firstname" class="form-control" placeholder="First Name"><br>
+        </div>
+        
+        <div class="form-group input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"  ></i></span>
+        <input name="middlename" class="form-control" placeholder="Middle Name"><br>
+        </div>
+        
+        <div class="form-group input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"  ></i></span>
+        <input name="lastname" class="form-control" placeholder="Last Name"><br>
+        </div>
+        
+        <div class="form-group input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-home"  ></i></span>
+        <input name="organization" class="form-control" placeholder="Organization"><br>
+        </div>
+        
+        <div class="form-group input-group">
+        <b >Select Your Country</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <select  name="country" style="width: 290px;">
 		<option>America</option>
 		 <option>Australia</option>
 		 <option>Austria</option>
@@ -111,10 +101,9 @@
 		 <option>Yemen</option>
 		 <option>Zimbabwe</option>
     </select><br>
-
-                 </div>
-<hr>
-                                        <div class="form-group input-group">
+    </div>
+        <hr>
+        <div class="form-group input-group">
                                             <table>
                                                 <tr>
                                                     <td style="width: 190px;"><b>Select Research Topic</b></td><td style="text-align: left;">
@@ -135,69 +124,64 @@
         <input type="checkbox" name="topic[]" value="Theory of Computation" />Theory of Computation<br />
         <input type="checkbox" name="topic[]" value="Wireless and Sensor Systems" />Wireless and Sensor Systems<br />
         <input type="checkbox" name="topic[]" value="Ubiquitous Computing" />Ubiquitous Computing<br />
-        </td>
+                                                    </td>
+                                                </tr>
+                                            </table>
+        </div>
+        <hr>
+            <div class="form-group input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-wrench"  ></i></span>
+                <input name="keywords" class="form-control" placeholder="Keywords"><br>
+            </div>
+            
+    <div class="form-group input-group">                          
+        <span class="input-group-addon"><i class="glyphicon glyphicon-screenshot"  ></i></span>
+        <input name="abstract" class="form-control" placeholder="Abstract"><br>
+    </div>
+            
+            <div class="form-group input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-plus"  ></i></span>
+                <input name="comments" class="form-control" placeholder="Optional Comments"><br>
+            </div>
+            
+           <div class="form-group input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-eye-open"  ></i></span> 
+            <input name="contactname" placeholder="Contact Name" class="form-control"><br>
+           </div>
+            
+        <div class="form-group input-group">
+            <span class="input-group-addon">@</span>
+            <input name="contactemail" class="form-control" placeholder="Contact Email"><br>
+        </div>
+            
+            <div class="form-group input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span>
+                <input name="contactnumber" class="form-control" placeholder="Contact Number"><br>
+            </div>
+	
+	<input type="hidden" name="MAX_FILE_SIZE" value="16000000">
+    <div class="btn btn-group">
+
+        <div class="form-group input-group">
+        <table>
+            <tr>
+                <td><input name="userfile" type="file" id="userfile" > </td><td>&nbsp;</td>
             </tr>
         </table>
-                                            <hr>
-                                        </div>
-                                        <div class="form-group input-group">
-                                            <span class="input-group-addon"><i class="glyphicon glyphicon-wrench"  ></i></span>
-                                           <input name="keywords" placeholder="Keywords" class="form-control"><br>
-                                        </div>
-
-                                        <div class="form-group input-group">
-                                            
-                                            <span class="input-group-addon"><i class="glyphicon glyphicon-screenshot"  ></i></span>
-                                            <input name="abstract" placeholder="Abstract" class="form-control"><br>
-                                            
-                                        </div>
-
-                                        <div class="form-group input-group">
-                                            
-                                            <span class="input-group-addon"><i class="glyphicon glyphicon-plus"  ></i></span>
-                                            <input name="comments" placeholder="Optional Comments" class="form-control"><br>
-                                            
-                                        </div>
-
-                                        <div class="form-group input-group">
-                                            <span class="input-group-addon"><i class="glyphicon glyphicon-eye-open"  ></i></span>
-                                            <input name="contactname" placeholder="Contact Name" class="form-control"><br>
-                                        </div>
-                                        
-                                        <div class="form-group input-group">
-                                            <span class="input-group-addon">@</span>
-                                            <input name="contactemail" placeholder="Contact Email" class="form-control"><br>
-                                        </div>
-
-                                        <div class="form-group input-group">
-                                            <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span>
-                                            <input name="contactnumber" placeholder="Contact Number" class="form-control"><br>
-                                        </div>
-                                    <div class="form-group input-group">
-                                            <span class="input-group-addon"><i class="glyphicon glyphicon-open"></i></span>
-                                            <input type="file" name="fileToUpload" id="fileToUpload" class="form-control"><br>
-                                    </div>
-
-                                    <div class="btn btn-group">
-                                        <table>
-                                            
-                                            <tr>
-                                                
-                                                <input type="submit" value="Upload Paper" name="submit">
-                                            </td>
-                                            </tr>
-                                        </table>
-
-                                    </div>        
-                            </form>
-                            </div>
-                           
-                        </div>
-                    </div>
-                
         </div>
         
+	<input name="upload" type="submit" class="box" id="upload" value=" Upload ">
+    </div>
+    <!--
+    <input type="file" name="fileToUpload" id="fileToUpload"><br>
+    <input type="submit" value="Upload Paper" name="submit">
+	-->
+	
+    </form>
+                </div>
+            </div>
+        </div>
         </div>
     </div>
-</body>
+    </body>
 </html>
