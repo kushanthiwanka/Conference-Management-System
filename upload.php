@@ -51,7 +51,7 @@ $contactname = filter_input(INPUT_POST, 'contactname');
 $contactnumber=filter_input(INPUT_POST, 'contactnumber');
 
 $con = mysql_connect('localhost', 'root', '') or die(mysql_error());
-$db = mysql_select_db('test', $con);
+$db = mysql_select_db('ucsc_conf', $con);
 /*
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
@@ -67,7 +67,7 @@ if ($db) {
 
         $sql = "INSERT INTO research_paper ( AuthorMail,state, PaperTitle, Date, firstName, middleName, lastName, organization, country, topicAriea, keyWord, abstract, optionalComment, contactName, contactNumber, name, size, type, content)". "VALUES ('$authorMail', '$state','$paperTitle', '$date', '$firstname','$middlename', '$lastname', '$organization', '$country', '$topic', '$keywords', '$abstract', '$comments', '$contactname', '$contactnumber', '$fileName', '$fileSize', '$fileType', '$content')";
 
-            mysql_query($sql) or die('Error, query failed');
+        mysql_query($sql) or die('Error, query failed');
             mysql_close();
             echo "<br>File $fileName uploaded<br>";
 	}else {
