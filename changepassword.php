@@ -6,6 +6,10 @@
         
 	$pas=mysql_query("SELECT password FROM member WHERE email_address='$username'");
         
+	$username=$_SESSION["email"];
+	require_once("DB_Connect.php");
+	$pas=mysqli_query($Registration_DB_Connect,'SELECT password FROM register WHERE email_address= $username ');
+
 
 ?>
 
