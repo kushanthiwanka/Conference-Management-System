@@ -7,7 +7,7 @@
 		<script language="javascript">
 <?php
 	session_start();
-	$username=$_SESSION["username"];
+	$username=$_SESSION["email"];
 	require_once("DB_Connect.php");
 	$pas=mysqli_query($Registration_DB_Connect,'SELECT password FROM register WHERE email_address= $username ');
 
