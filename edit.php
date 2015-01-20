@@ -17,7 +17,7 @@
 	<h1 style="color:gold">Change My Account</h1>
 <br>
 
-<form action="Edit_Users.php" method="post" name="edit"onsubmit="return CheckForm();">
+<form action="Edit_Users.php" method="post" name="edit"  <!-- onsubmit="return CheckForm();" -->>
 <table>
 <tr>
 	<td style="color:gold">Name</td>
@@ -37,8 +37,6 @@
 	<td><input type="tel" name="phone_number" value="" size="50"></td>
 </tr>
 
-
-
 <tr>
 	<td style="color:gold">Username</td>
 	<td><input type="text" name="username" value="" size="50"></td>
@@ -49,11 +47,11 @@
 </table>
 <br><br>
 		
-		<button type="submit" class="btn btn-primary ">change</button></form>
-		<form action="author.php">	<button type="submit" class="btn btn-warning ">cancel</button></form>
+    <input type="submit" class="btn btn-primary" value="Change" name="submit">
+</form>
+
+<button type="submit" name="submit" class="btn btn-warning"><a href="author.php">cancel</a></button>
 		
-
-
 </center>
 </body>
 

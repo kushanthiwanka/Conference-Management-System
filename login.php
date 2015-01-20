@@ -29,7 +29,7 @@ function SignIn()
 	else
 		{
 		$_SESSION["email_address"] = $name;
-		header("Location:user.php");
+		header("Location:selectpg.php");
 		exit;
 		}
 }

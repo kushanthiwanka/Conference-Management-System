@@ -1,38 +1,51 @@
+<html>
+    <head>
+        <script>
+            	if(document.edit.name.value!=''){
+		$query2 = ("UPDATE member SET name='$name' WHERE username = '$username'");
+		mysqli_query($Registration_DB_Connect,$query2);
+	}
+	if(document.edit.address.value!=''){
+		$query2 = ("UPDATE member SET address='$postal_address' WHERE username = '$username'");
+		mysqli_query($Registration_DB_Connect,$query2);
+	}
+	if(document.edit.phone_number.value!=''){
+		$query2 = ("UPDATE member SET phone_number='$phone_number' WHERE username = '$username'");
+		mysqli_query($Registration_DB_Connect,$query2);
+	}
+	if(document.edit.username.value!=''){
+		$query2 = ("UPDATE member SET username='$username' WHERE username = '$username'");
+		mysqli_query($Registration_DB_Connect,$query2);
+	}
+
+        </script>
+
+    </head>
+</html>
+
 <?php
 
 session_start();
-$_SESSION["username"]=$username;
-if(!isset($_SESSION["username"])) 
+$username=$_SESSION["email_address"];
+
+if(!isset($_SESSION["email_address"])) 
 	{
 	header("Location:Error.html");
 	exit;
 	}
-if(isset($_POST["submit"]))
+if(isset($_POST['submit']))
 	{
-	$username=$_SESSION["username"]
-	require_once("DB_Connect.php");
-	$name = $_POST["name"];
-	$postal_address = $_POST["postal_address"];
-	$phone_number = $_POST["phone_number"];
-	$username = $_POST["username"];
-	if(document.edit.name.value!=''){
-		$query2 = ("UPDATE register SET name='$name' WHERE username = '$username'");
-		mysqli_query($Registration_DB_Connect,$query2);
-	}
-	if(document.edit.address.value!=''){
-		$query2 = ("UPDATE register SET address='$postal_address' WHERE username = '$username'");
-		mysqli_query($Registration_DB_Connect,$query2);
-	}
-	if(document.edit.phone_number.value!=''){
-		$query2 = ("UPDATE register SET phone_number='$phone_number' WHERE username = '$username'");
-		mysqli_query($Registration_DB_Connect,$query2);
-	}
-	if(document.edit.username.value!=''){
-		$query2 = ("UPDATE register SET username='$username' WHERE username = '$username'");
-		mysqli_query($Registration_DB_Connect,$query2);
-	}
+	        
+	$con=mysql_connect('localhost','root','');
+        $var = mysql_select_db('ucsc_conf');
+        
+	$name = filter_input(INPUT_POST, 'var_name')["name"];
+	$postal_address = filter_input(INPUT_POST, 'postal_address');
+	$phone_number = filter_input(INPUT_POST, 'phone_number');
+	$username = filter_input(INPUT_POST, 'username');
+        
 	echo'change successfull';
-	mysqli_close($Registration_DB_Connect);
+	mysql_close($Registration_DB_Connect);
 	}
 	
 ?>

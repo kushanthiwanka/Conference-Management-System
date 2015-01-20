@@ -14,7 +14,14 @@
     <div class="row">
         <div class="col-sm-10">
             <br><br>
-          <button type="button" class="btn btn-info">Menuka5</button> <button type="button" class="btn btn-success">Log out</button>  
+            <?php session_start();  
+            $username=$_SESSION['email_address'];
+            $con=mysql_connect('localhost','root','');
+            $var = mysql_select_db('ucsc_conf');
+            $my = mysql_query("SELECT first_name FROM member WHERE email_address='$username'");
+            $tt = mysql_fetch_array($my);
+            ?>
+            <button type="button" class="btn btn-info"><?php  echo $tt['first_name'];?></button> <button type="button" class="btn btn-success"><a href="logout.php">Log out</a></button>  
 <br>
         </div>
         
@@ -42,8 +49,8 @@
   <div class="panel panel-default" style="width: 60%; position: absolute; left: 400px;">
                 <div class="panel-heading">My Account</div>
                 <div class="panel-body"> 
-                    <a class="btn btn-info">Edit My Profile</a><br><br>
-                    <a class="btn btn-info">Change Password</a><br><br>
+                    <a class="btn btn-info" href="edit.php">Edit My Profile</a><br><br>
+                    <a class="btn btn-info" href="changepassword.php">Change Password</a><br><br>
                     <a class="btn btn-info">Upload Paper</a><br><br>
                 </div>
             </div>
