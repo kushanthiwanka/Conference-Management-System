@@ -33,8 +33,16 @@ if (!mysql_query($sql))
   die('Error: ' . mysql_error());
 
   }
+?>
+<script>
+  
+ <?php 
+    header("Location:Reviewer.php");
+  ?>
 
-echo "1 record updated";
+</script>
+
+
 
  
 

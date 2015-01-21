@@ -141,25 +141,14 @@ if(document.htmlform.comments.value == '')
 </div>
 </div>
 
-
-
 </div>
 </div>
 </div>
 
   <br>
 
-    
-
-
-  
-
-  
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-
-        
-       
+      
 </div>
 </body>
 </html>                                  		
